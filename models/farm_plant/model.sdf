@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="farm_plant">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0 0 0 0</pose>
+
+      <visual name="stem_visual">
+        <pose>0 0 0.1 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.2</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Brown</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="stem_collision">
+        <pose>0 0 0.1 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.02</radius>
+            <length>0.2</length>
+          </cylinder>
+        </geometry>
+      </collision>
+
+      <visual name="foliage_visual">
+        <pose>0 0 0.25 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.12</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Green</name>
+          </script>
+        </material>
+      </visual>
+      <collision name="foliage_collision">
+        <pose>0 0 0.25 0 0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.12</radius>
+          </sphere>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

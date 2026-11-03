@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <world name="farm_field">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+    <gui>
+      <camera name="user_camera">
+        <pose>-2 -2 4 0 0.6 0.8</pose>
+      </camera>
+    </gui>
+
+
+    <model name="plant_1">
+      <static>true</static>
+      <pose>0.557 0.616 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_2">
+      <static>true</static>
+      <pose>0.61 2.235 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_3">
+      <static>true</static>
+      <pose>0.632 3.787 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_4">
+      <static>true</static>
+      <pose>0.592 5.365 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_5">
+      <static>true</static>
+      <pose>2.259 5.441 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Yellow</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_6">
+      <static>true</static>
+      <pose>2.146 3.788 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_7">
+      <static>true</static>
+      <pose>2.164 2.154 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Yellow</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_8">
+      <static>true</static>
+      <pose>2.242 0.536 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_9">
+      <static>true</static>
+      <pose>3.781 0.577 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_10">
+      <static>true</static>
+      <pose>3.775 2.162 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_11">
+      <static>true</static>
+      <pose>3.727 3.794 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Yellow</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_12">
+      <static>true</static>
+      <pose>3.74 5.468 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Yellow</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_13">
+      <static>true</static>
+      <pose>5.333 5.367 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_14">
+      <static>true</static>
+      <pose>5.421 3.862 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Yellow</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_15">
+      <static>true</static>
+      <pose>5.378 2.151 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="plant_16">
+      <static>true</static>
+      <pose>5.331 0.626 0 0 0 0</pose>
+      <link name="link">
+        <visual name="stem_visual">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Brown</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="stem_collision">
+          <pose>0 0 0.1 0 0 0</pose>
+          <geometry><cylinder><radius>0.02</radius><length>0.2</length></cylinder></geometry>
+        </collision>
+        <visual name="foliage_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+        <collision name="foliage_collision">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry><sphere><radius>0.12</radius></sphere></geometry>
+        </collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

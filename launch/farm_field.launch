@@ -1,0 +1,44 @@
+<launch>
+  <!-- Which TurtleBot3 model - waffle has camera + LIDAR -->
+  <arg name="model" default="waffle"/>
+  <arg name="gui" default="false"/>
+  <env name="TURTLEBOT3_MODEL" value="$(arg model)"/>
+
+  <!-- Launch Gazebo with custom farm field world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find farm_field_scout)/worlds/farm_field.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <!-- Spawn TurtleBot3 Waffle at the corner of the field -->
+  <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot3_description)/urdf/turtlebot3_$(arg model).urdf.xacro"/>
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model turtlebot3_$(arg model) -x 1.4 -y -0.5 -z 0.0 -Y 0.0 -param robot_description"/>
+
+  <!-- Robot state publisher, needed for TF -->
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="50.0"/>
+  </node>
+
+  <!-- Field navigator - drives the 4-pass zigzag aisle sweep -->
+  <node name="field_navigator" pkg="farm_field_scout" type="field_navigator.py" output="screen">
+    <param name="linear_speed" value="0.20"/>
+    <param name="angular_speed" value="0.50"/>
+  </node>
+
+  <!-- Plant inspector - detects plants via diagonal LIDAR, classifies via camera + model -->
+  <node name="plant_inspector" pkg="farm_field_scout" type="plant_inspector.py" output="screen">
+    <param name="detection_threshold" value="1.6"/>
+    <param name="match_radius" value="2.0"/>
+    <param name="left_band_min_deg"  value="25.0"/>
+    <param name="left_band_max_deg"  value="42.0"/>
+    <param name="right_band_min_deg" value="318.0"/>
+    <param name="right_band_max_deg" value="335.0"/>
+  </node>
+
+  <!-- Visualization and logging nodes -->
+  <node name="plant_label_publisher" pkg="farm_field_scout" type="plant_label_publisher.py" output="screen"/>
+  <node name="scout_logger" pkg="farm_field_scout" type="scout_logger.py" output="screen"/>
+
+</launch>

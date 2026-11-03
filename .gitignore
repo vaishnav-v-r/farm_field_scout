@@ -1,0 +1,18 @@
+# Python byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+nav_debug.log
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ROS temporary files
+*.bag
+*.launch.save
