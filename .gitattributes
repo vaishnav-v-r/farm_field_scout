@@ -1,0 +1,7 @@
+# Explicitly tell GitHub to treat Gazebo/ROS XML files with syntax highlighting
+*.world linguist-language=XML
+*.launch linguist-language=XML
+*.urdf linguist-language=XML
+*.xacro linguist-language=XML
+*.sdf linguist-language=XML
+*.config linguist-language=XML
